@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050914">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@500;600;700&display=swap">
+<title>Pênalti de Ouro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<!-- MENU -->
+<section id="menu">
+  <div class="trophy">⚽</div>
+  <h1>Pênalti de Ouro</h1>
+  <p class="sub">Um chuta, o outro defende. Escolha o canto, pare a barra de força na faixa verde e marque 5 gols primeiro para levar o troféu. Jogue com amigos em qualquer aparelho: computador, celular ou tablet.</p>
+  <div class="col">
+    <button id="bOnline">Modo Online</button>
+    <button id="bLocal">Modo Local</button>
+  </div>
+  <p class="kl">Escolha seu uniforme</p>
+  <div class="kits" id="kits"></div>
+  <div class="rec" id="rec"></div>
+</section>
+
+<!-- SALAS -->
+<section id="lobby" class="hide">
+  <h1>Salas</h1>
+  <p class="sub">Crie uma sala e envie o código ou o link para o outro jogador, ou entre com o código que recebeu. Cada um joga no seu aparelho.</p>
+  <div class="card col">
+    <button id="bCreate">Criar sala</button>
+    <div id="roomInfo" class="hide"><div>Código da sala</div><div class="code" id="roomCode"></div><div>Aguardando o outro jogador…</div><button class="ghost" id="bShare">Copiar link de convite</button></div>
+  </div>
+  <div class="card col" id="joinBox">
+    <input id="codeIn" maxlength="5" placeholder="CÓDIGO" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go">
+    <button id="bJoin">Entrar na sala</button>
+  </div>
+  <div id="status"></div>
+  <button class="ghost" id="bBack1" style="margin-top:12px">Voltar</button>
+</section>
+
+<!-- JOGO -->
+<section id="game" class="hide">
+  <div id="hud">
+    <div class="pl" style="--c:var(--p0)"><b id="n0">Jogador 1</b><div class="n" id="s0">0</div><div class="dots" id="d0"></div></div>
+    <div class="mid">Primeiro a<br><b>5 gols</b><br><span id="turn"></span></div>
+    <div class="pl" style="--c:var(--p1)"><b id="n1">Jogador 2</b><div class="n" id="s1">0</div><div class="dots" id="d1"></div></div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="crowd"></div>
+    <div class="lt a"></div><div class="lt b"></div>
+    <div class="ads"><span>PÊNALTI DE OURO</span><span>🏆 FAIR PLAY</span><span>GOLAÇO</span><span>🥅 5 GOLS</span><span>PÊNALTI DE OURO</span></div>
+    <div class="line" style="top:46%"></div>
+    <div class="line" style="top:76%"></div>
+    <div class="goal" id="goal">
+      <div class="zones"><i class="z0"></i><i class="z1"></i><i class="z2"></i><i class="z3"></i><i class="z4"></i></div>
+      <div class="zhl" id="zhl"></div>
+      <div class="mark" id="mark"></div>
+    </div>
+    <div class="keeper" id="keeper"></div>
+    <div class="kicker k0" id="kicker"></div>
+    <div class="spot"></div>
+    <div class="shadow" id="shadow"></div>
+    <div class="ball" id="ball"></div>
+    <div id="fx"></div>
+    <div id="pw" class="hide"><span>FORÇA</span><i id="pwn"></i></div>
+    <div id="cm"></div>
+    <div id="flash"></div>
+    <div id="ov" class="hide"></div>
+  </div>
+
+  <p id="msg"></p>
+  <div class="row">
+    <button id="bOk" disabled>Confirmar</button>
+    <button class="ghost" id="bMute" aria-label="Som">🔊</button>
+    <button class="ghost" id="bBack2">Sair</button>
+  </div>
+</section>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
