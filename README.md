@@ -1,1 +1,0 @@
-# Penalti-de-Ouro
